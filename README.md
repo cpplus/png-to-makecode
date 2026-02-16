@@ -8,7 +8,7 @@ Useful for MakeCode Arcade sprites, tiles, and icons.
 - Trims transparent borders
 - Builds a global color palette
 - Encodes pixel data into a compact two-character format
-- Outputs everything into output.txt
+- Outputs everything into gpu.js
 
 ## How to Build
 1. Install Visual Studio 2022 with the "Desktop development with C++" workload.
@@ -33,7 +33,7 @@ Example:
 
 After processing, the program writes all results to:
 
-    output.txt
+    gpu.js
 
 ## Example Output
     let allColors: number[] = [0,15721648]
@@ -43,9 +43,9 @@ After processing, the program writes all results to:
 
 1. Open your MakeCode project.
 2. Open the file where your image data should go.
-3. Copy everything from **other.txt** into your MakeCode project.
-4. Replace the `allColors` array in MakeCode with the one from **output.txt**.
-5. Replace each `pngX` entry (png0, png1, etc.) with the matching entries from **output.txt**.
+3. Copy everything from **gpu.js** into your MakeCode project.
+4. Replace the `allColors` array in MakeCode with the one from **gpu.js**.
+5. Replace each `pngX` entry (png0, png1, etc.) with the matching entries from **gpu.js**.
 6. In `namespace userconfig {}`, replace the placeholder `5`s with the actual width and height of your image.
 7. Replace the last `3`s with a number that controls scaling:
    - Small images → use a larger number
@@ -60,7 +60,7 @@ After processing, the program writes all results to:
     pngToMakecode.vcxproj
     .gitignore
     .gitattributes
-    other.txt
+    gpu.js
 
 ## License
 MIT License
