@@ -145,9 +145,9 @@ int main() {
     }
 
     // Write output
-    std::ofstream out("gpu.js");
+    std::ofstream out("output.js");
     if (!out.is_open()) {
-        std::cerr << "Failed to open gpu.js\n";
+        std::cerr << "Failed to open output.js\n";
         return 1;
     }
 
@@ -172,6 +172,6 @@ int main() {
     }
 
     out.close();
-    std::cout << "Wrote gpu.js successfully.\n";
+    std::cout << "Wrote output.js successfully.\n";
     return 0;
 }
